@@ -1,6 +1,5 @@
 package com.example.buscador.DAO;
 
-
 import com.example.buscador.modelos.Category;
 import javafx.application.Platform;
 import javafx.concurrent.Task;

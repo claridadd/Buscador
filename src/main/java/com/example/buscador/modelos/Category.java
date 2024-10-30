@@ -4,15 +4,15 @@ import java.sql.Timestamp;
 
 public class Category
 {
-    private int id;
-    private int color;
-    private int parent_id;
-    private char parent_path;
-    private boolean active;
+    private Integer id;
+    private Integer color;
+    private Integer parent_id;
+    private String parent_path;
+    private Boolean active;
     private Timestamp create_time;
     private Timestamp write_time;
 
-    public Category(int id, int color, int parent_id,  char parent_path, boolean active, Timestamp create_time, Timestamp write_time)
+    public Category(Integer id, Integer color, Integer parent_id,  String parent_path, Boolean active, Timestamp create_time, Timestamp write_time)
     {
         this.id = id;
         this.color = color;
@@ -23,58 +23,53 @@ public class Category
         this.write_time = write_time;
     }
 
-    public Category()
-    {
-
-    }
-
-    public int getId()
+    public Integer getId()
     {
         return id;
     }
 
-    public void setId(int id)
+    public void setId(Integer id)
     {
         this.id = id;
     }
 
-    public int getColor()
+    public Integer getColor()
     {
         return color;
     }
 
-    public void setColor(int color)
+    public void setColor(Integer color)
     {
         this.color = color;
     }
 
-    public int getParent_id()
+    public Integer getParent_id()
     {
         return parent_id;
     }
 
-    public void setParent_id(int parent_id)
+    public void setParent_id(Integer parent_id)
     {
         this.parent_id = parent_id;
     }
 
 
-    public char getParent_path()
+    public String getParent_path()
     {
         return parent_path;
     }
 
-    public void setParent_path(char parent_path)
+    public void setParent_path(String parent_path)
     {
         this.parent_path = parent_path;
     }
 
-    public boolean isActive()
+    public Boolean isActive()
     {
         return active;
     }
 
-    public void setActive(boolean active)
+    public void setActive(Boolean active)
     {
         this.active = active;
     }

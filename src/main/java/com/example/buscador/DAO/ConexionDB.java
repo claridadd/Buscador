@@ -7,11 +7,10 @@ import java.sql.SQLException;
 
 public class ConexionDB
 {
-        public static Connection connection = null;
         public static Connection conectar() throws RuntimeException
         {
             // Reemplaza con tus datos de conexión
-            String url = "jdbc:postgresql://localhost:5432/postgres";
+            String url = "jdbc:postgresql://localhost:8080/odoo";
             String usuario = "odoo";
             String contrasena = "odoo";
 
@@ -26,6 +25,6 @@ public class ConexionDB
                 e.printStackTrace();
                 System.exit(-1);
             }
-            return connection;
+            return null;
         }
-    }
+}
