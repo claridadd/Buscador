@@ -10,7 +10,7 @@ public class ConexionDB
         public static Connection conectar() throws RuntimeException
         {
             // Reemplaza con tus datos de conexión
-            String url = "jdbc:postgresql://localhost:8080/odoo";
+            String url = "jdbc:postgresql://localhost:5432/odoo";
             String usuario = "odoo";
             String contrasena = "odoo";
 

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="751.0" prefHeight="688.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vbFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="751.0" prefHeight="688.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="Tabla de res_partner_category">
          <font>
@@ -29,14 +29,14 @@
                   <Insets left="60.0" top="30.0" />
                </HBox.margin>
             </Label>
-            <TextField prefHeight="25.0" prefWidth="318.0" promptText="tfBuscador">
+            <TextField fx:id="tfVisor" prefHeight="25.0" prefWidth="318.0" promptText="tfBuscador">
                <HBox.margin>
                   <Insets left="15.0" right="10.0" top="30.0" />
                </HBox.margin>
             </TextField>
-            <Button fx:id="btnBuscar" mnemonicParsing="false">
+            <Button id="Boton" fx:id="btnBuscar" mnemonicParsing="false">
                <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ivBuscar" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../fotos/lupa.png" />
                      </image>
@@ -46,9 +46,9 @@
                   <Insets right="50.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnAñadir" mnemonicParsing="false">
+            <Button id="Boton" fx:id="btnAñadir" mnemonicParsing="false">
                <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ivAñadir" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../fotos/mas-positivo-suma-simbolo-matematico.png" />
                      </image>
@@ -58,9 +58,9 @@
                   <Insets right="15.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnEditar" mnemonicParsing="false">
+            <Button id="Boton" fx:id="btnEditar" mnemonicParsing="false">
                <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ivEditar" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../fotos/lapiz.png" />
                      </image>
@@ -70,9 +70,9 @@
                   <Insets right="15.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="btnBorrar" mnemonicParsing="false" HBox.hgrow="SOMETIMES">
+            <Button id="Boton" fx:id="btnBorrar" mnemonicParsing="false" HBox.hgrow="SOMETIMES">
                <graphic>
-                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ivBorrar" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../fotos/contenedor-de-basura.png" />
                      </image>
@@ -84,13 +84,13 @@
             </Button>
          </children>
       </HBox>
-      <TableView prefHeight="364.0" prefWidth="641.0" VBox.vgrow="ALWAYS">
+      <TableView fx:id="tvTabla" prefHeight="364.0" prefWidth="641.0" VBox.vgrow="ALWAYS">
         <columns>
-          <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="75.0" text="Id" />
-            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="91.0" text="Parent_path" />
-            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="95.0" text="Name" />
-            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="139.0" text="Active" />
-            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="258.0" text="Create_date" />
+          <TableColumn id="tablaCabecera" fx:id="columnaId" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="75.0" text="Id" />
+            <TableColumn id="tablaCabecera" fx:id="columnaParentPath" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="91.0" text="Parent_path" />
+            <TableColumn id="tablaCabecera" fx:id="columnaName" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="95.0" text="Name" />
+            <TableColumn id="tablaCabecera" fx:id="columnaActive" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="139.0" text="Active" />
+            <TableColumn id="tablaCabecera" fx:id="columnaCreateDate" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="258.0" text="Create_date" />
         </columns>
          <VBox.margin>
             <Insets bottom="30.0" left="60.0" right="60.0" />

@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03196e8a-551f-4f77-b62a-73a07bca10b9" name="Changes" comment="Jueves - 24/10/2024">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/modelos/Category.java" afterDir="false" />
+    <list default="true" id="03196e8a-551f-4f77-b62a-73a07bca10b9" name="Changes" comment="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/añadir.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/estilos.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/ConexionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buscador/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/Controladores/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/ConexionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buscador/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/buscador/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -70,6 +70,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -113,6 +114,7 @@
       <workItem from="1729759207992" duration="3076000" />
       <workItem from="1730099328819" duration="26000" />
       <workItem from="1730100047843" duration="7349000" />
+      <workItem from="1730272836182" duration="6360000" />
     </task>
     <task id="LOCAL-00001" summary="Jueves - 24/10/2024">
       <option name="closed" value="true" />
@@ -122,7 +124,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729767777608</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Jueves - 30/10/2024">
+      <option name="closed" value="true" />
+      <created>1730273019856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730273019856</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos">
+      <option name="closed" value="true" />
+      <created>1730274952174</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730274952174</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +159,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jueves - 24/10/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jueves - 24/10/2024" />
+    <MESSAGE value="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/CategoryDAO.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

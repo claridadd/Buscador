@@ -17,6 +17,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Tabla de res_partner_category");
         stage.setScene(scene);
         stage.show();
+        scene.getStylesheets().add(getClass().getResource("estilos.css").toExternalForm());
     }
 
     public static void main(String[] args) {
