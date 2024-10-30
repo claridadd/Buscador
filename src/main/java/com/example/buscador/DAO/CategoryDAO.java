@@ -2,6 +2,7 @@ package com.example.buscador.DAO;
 
 import com.example.buscador.modelos.Category;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 
 import java.io.Reader;
@@ -11,26 +12,39 @@ import java.util.List;
 
 public class CategoryDAO
 {
-    public void consultarClientes() {
+    public void consultarClientes(String palabra) {
         Task<Void> tarea = new Task<Void>() {
             @Override
             protected Void call() throws Exception {
 
                 List<Category> categorias = new ArrayList<>();
+                String comando;
+
+                if(palabra.strip().isEmpty())
+                    comando = "SELECT * FROM res_partner_category";
+                else
+                    comando = "SELECT * FROM res_partner_category WHERE id = '" + palabra + " ' ";
 
                 try (
                      Connection conexion = ConexionDB.conectar();
                      Statement sentencia = conexion.createStatement();
-                     ResultSet resultado = sentencia.executeQuery("SELECT * FROM res_partner_category"))
+                     ResultSet resultado = sentencia.executeQuery(comando))
                 {
 
                     while (resultado.next()) {
 
-                        Category categoria = new Category();
-                        categoria.setId(resultado.getInt("id"));
-                        categorias.add(categoria);
-                        System.out.println(resultado.getInt("id"));
+                        Integer id = resultado.getInt("id");
+                        Integer color = resultado.getInt("color");
+                        Integer parent_id = resultado.getInt("parent_id");
 
+                        String parent_path = resultado.getString("Ruta padre:");
+
+                        Boolean active = resultado.getBoolean("active");
+                        Timestamp created = resultado.getTimestamp("created");
+
+                        categorias.add((new Category(id, color, parent_id, parent_path, active, created)));
+
+                        ObservableList<Category>
 
                         Platform.runLater(() -> {
                             // Actualizar la interfaz gráfica con los valores de nombre y apellido

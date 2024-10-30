@@ -10,9 +10,9 @@ public class Category
     private String parent_path;
     private Boolean active;
     private Timestamp create_time;
-    private Timestamp write_time;
 
-    public Category(Integer id, Integer color, Integer parent_id,  String parent_path, Boolean active, Timestamp create_time, Timestamp write_time)
+
+    public Category(Integer id, Integer color, Integer parent_id, String parent_path, Boolean active, Timestamp create_time)
     {
         this.id = id;
         this.color = color;
@@ -20,7 +20,6 @@ public class Category
         this.parent_path = parent_path;
         this.active = active;
         this.create_time = create_time;
-        this.write_time = write_time;
     }
 
     public Integer getId()
@@ -53,7 +52,6 @@ public class Category
         this.parent_id = parent_id;
     }
 
-
     public String getParent_path()
     {
         return parent_path;
@@ -84,13 +82,5 @@ public class Category
         this.create_time = create_time;
     }
 
-    public Timestamp getWrite_time()
-    {
-        return write_time;
-    }
 
-    public void setWrite_time(Timestamp write_time)
-    {
-        this.write_time = write_time;
-    }
 }
