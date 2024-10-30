@@ -10,21 +10,21 @@ public class ConexionDB
         public static Connection conectar() throws RuntimeException
         {
             // Reemplaza con tus datos de conexión
-            String url = "jdbc:postgresql://localhost:5432/odoo";
-            String usuario = "odoo";
-            String contrasena = "odoo";
+            String dbName   = "odoo";
+            String dbPort   = "8080";
+            String username = "odoo";
+            String password = "odoo";
 
             try {
-                Class.forName("org.postgresql.Driver");
-                Connection connection = DriverManager.getConnection(url, usuario, contrasena);
+                String url = "jdbc:postgresql://localhost:" + dbPort + "/" + dbName;
+                return DriverManager.getConnection(url, username, password);
 
-                return DriverManager.getConnection(url, usuario, contrasena);
-
-            } catch (SQLException | ClassNotFoundException e) {
+            } catch (SQLException e) {
                 System.err.println("Error de SQL al conectar: " + e.getMessage());
                 e.printStackTrace();
                 System.exit(-1);
             }
+
             return null;
         }
 }

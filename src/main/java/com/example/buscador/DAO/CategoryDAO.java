@@ -1,71 +1,51 @@
 package com.example.buscador.DAO;
 
 import com.example.buscador.modelos.Category;
-import javafx.application.Platform;
-import javafx.concurrent.Task;
 
-import java.io.Reader;
+import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryDAO
 {
-    public void consultarClientes() {
-        Task<Void> tarea = new Task<Void>() {
-            @Override
-            protected Void call() throws Exception {
-
-                List<Category> categorias = new ArrayList<>();
-
-                try (
-                     Connection conexion = ConexionDB.conectar();
-                     Statement sentencia = conexion.createStatement();
-                     ResultSet resultado = sentencia.executeQuery("SELECT * FROM res_partner_category"))
-                {
-
-                    while (resultado.next()) {
-
-                        Category categoria = new Category();
-                        categoria.setId(resultado.getInt("id"));
-                        categorias.add(categoria);
-                        System.out.println(resultado.getInt("id"));
+    public static List<Category> obtenerCategorias(String palabra) throws SQLException {
 
 
-                        Platform.runLater(() -> {
-                            // Actualizar la interfaz gráfica con los valores de nombre y apellido
-                            // Por ejemplo, añadirlos a un ListView, Label, etc.
-                        });
-                    }
+        List<Category> categorias = new ArrayList<>();
+        String comando;
 
-                } catch (SQLException e) {
-                    System.err.println("Error de SQL al consultar: " + e.getMessage());
-                    Platform.runLater(() -> {
-                        // Mostrar un mensaje de error en la interfaz gráfica
-                    });
-                }
-                return null;
+        if(palabra.strip().isEmpty())
+            comando = "SELECT * FROM res_partner_category";
+        else
+            comando = "SELECT * FROM res_partner_category WHERE id = '" + palabra + " ' ";
+
+        try (
+             Connection conexion = ConexionDB.conectar();
+             Statement sentencia = conexion.createStatement();
+             ResultSet resultado = sentencia.executeQuery(comando))
+        {
+
+            while (resultado.next())
+            {
+                Integer id = resultado.getInt("id");
+                Integer color = resultado.getInt("color");
+                Integer parent_id = resultado.getInt("parent_id");
+
+                String parent_path = resultado.getString("parent_path");
+
+                Boolean active = resultado.getBoolean("active");
+                Timestamp created = resultado.getTimestamp("created");
+
+                categorias.add((new Category(id, color, parent_id, parent_path, active, created)));
             }
-        };
+        } catch (SQLException e)
+        {
+            throw new RuntimeException(e);
+        }
+        return categorias;
 
-        Thread hilo = new Thread(tarea);
-        hilo.start();
     }
 
 }
 
-
-
-//
-//Character parent_path = apellido != null && !apellido.isEmpty() ? apellido.charAt(0) : null;
-//
-//// Crear un objeto JSON con los datos
-//JSONObject jsonObject = new JSONObject();
-//                        jsonObject.put("id", id);
-//                        jsonObject.put("parent_path", parent_path != null ? parent_path.toString() : ""); // Convertir Character a String
-//
-//// Si necesitas pasar datos a un JSObject (por ejemplo, en una interfaz WebView)
-//JSObject jsObject = null; // Inicializa tu JSObject si es necesario para tu caso
-//                        if (jsObject != null) {
-//        jsObject.setMember("data", jsonObject.toString()); // Envía los datos al JSObject
-//        }

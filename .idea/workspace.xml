@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03196e8a-551f-4f77-b62a-73a07bca10b9" name="Changes" comment="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/añadir.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/estilos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/ConexionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buscador/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buscador/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/buscador/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/buscador/hello-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="03196e8a-551f-4f77-b62a-73a07bca10b9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +41,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -79,7 +75,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -115,6 +111,10 @@
       <workItem from="1730099328819" duration="26000" />
       <workItem from="1730100047843" duration="7349000" />
       <workItem from="1730272836182" duration="6360000" />
+      <workItem from="1730282577804" duration="4357000" />
+      <workItem from="1730355186280" duration="2550000" />
+      <workItem from="1730357771423" duration="554000" />
+      <workItem from="1730358739843" duration="4632000" />
     </task>
     <task id="LOCAL-00001" summary="Jueves - 24/10/2024">
       <option name="closed" value="true" />
@@ -140,18 +140,85 @@
       <option name="project" value="LOCAL" />
       <updated>1730274952174</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="añadido los css">
+      <option name="closed" value="true" />
+      <created>1730282804408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730282804408</updated>
+    </task>
+    <task id="LOCAL-00005" summary="he creado las consultas para ver los datos">
+      <option name="closed" value="true" />
+      <created>1730288904000</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730288904000</updated>
+    </task>
+    <task id="LOCAL-00006" summary="he creado las consultas para ver los datos">
+      <option name="closed" value="true" />
+      <created>1730357379930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730357379930</updated>
+    </task>
+    <task id="LOCAL-00007" summary="he creado las consultas para ver los datos">
+      <option name="closed" value="true" />
+      <created>1730362268572</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730362268572</updated>
+    </task>
+    <task id="LOCAL-00008">
+      <option name="closed" value="true" />
+      <created>1730363696044</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730363696044</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -160,15 +227,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Jueves - 24/10/2024" />
     <MESSAGE value="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiar los tipos de las clases de las variables y establecer la conexion con la base de datos" />
+    <MESSAGE value="añadido los css" />
+    <MESSAGE value="He actualizado las variables, cambiado la forma de conectarse con la base de datos y estoy arreglando el Platform.runLAter()" />
+    <MESSAGE value="He actualizado la busqueda de mi tabla" />
+    <MESSAGE value="he creado las consultas para ver los datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="he creado las consultas para ver los datos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/buscador/DAO/CategoryDAO.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/buscador/modelos/Category.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

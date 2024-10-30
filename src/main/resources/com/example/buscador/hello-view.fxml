@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vbFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="800.0" minWidth="751.0" prefHeight="688.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vbFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="624.0" minWidth="751.0" prefHeight="624.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.buscador.Controladores.HelloController">
    <children>
-      <Label text="Tabla de res_partner_category">
+      <Label id="lbTitulo" text="Tabla de res_partner_category">
          <font>
             <Font name="Segoe UI Light" size="24.0" />
          </font>
@@ -29,12 +29,12 @@
                   <Insets left="60.0" top="30.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfVisor" prefHeight="25.0" prefWidth="318.0" promptText="tfBuscador">
+            <TextField fx:id="tfVisor" prefHeight="25.0" prefWidth="318.0" promptText="Buscar texto">
                <HBox.margin>
                   <Insets left="15.0" right="10.0" top="30.0" />
                </HBox.margin>
             </TextField>
-            <Button id="Boton" fx:id="btnBuscar" mnemonicParsing="false">
+            <Button id="Boton" fx:id="btnBuscar" mnemonicParsing="false" onAction="#onClickBuscar">
                <graphic>
                   <ImageView fx:id="ivBuscar" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -87,10 +87,10 @@
       <TableView fx:id="tvTabla" prefHeight="364.0" prefWidth="641.0" VBox.vgrow="ALWAYS">
         <columns>
           <TableColumn id="tablaCabecera" fx:id="columnaId" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="75.0" text="Id" />
-            <TableColumn id="tablaCabecera" fx:id="columnaParentPath" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="91.0" text="Parent_path" />
-            <TableColumn id="tablaCabecera" fx:id="columnaName" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="95.0" text="Name" />
-            <TableColumn id="tablaCabecera" fx:id="columnaActive" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="139.0" text="Active" />
-            <TableColumn id="tablaCabecera" fx:id="columnaCreateDate" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="258.0" text="Create_date" />
+            <TableColumn id="tablaCabecera" fx:id="columnaParentPath" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="91.0" text="Ruta padre" />
+            <TableColumn id="tablaCabecera" fx:id="columnaColor" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="95.0" text="Color" />
+            <TableColumn id="tablaCabecera" fx:id="columnaActive" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="139.0" text="Activo" />
+            <TableColumn id="tablaCabecera" fx:id="columnaCreateDate" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="258.0" text="Fecha de creación" />
         </columns>
          <VBox.margin>
             <Insets bottom="30.0" left="60.0" right="60.0" />
