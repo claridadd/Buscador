@@ -29,12 +29,12 @@
                   <Insets left="60.0" top="30.0" />
                </HBox.margin>
             </Label>
-            <TextField prefHeight="25.0" prefWidth="318.0">
+            <TextField prefHeight="25.0" prefWidth="318.0" promptText="tfBuscador">
                <HBox.margin>
                   <Insets left="15.0" right="10.0" top="30.0" />
                </HBox.margin>
             </TextField>
-            <Button mnemonicParsing="false">
+            <Button fx:id="btnBuscar" mnemonicParsing="false">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -46,7 +46,7 @@
                   <Insets right="50.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false">
+            <Button fx:id="btnAñadir" mnemonicParsing="false">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -58,7 +58,7 @@
                   <Insets right="15.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false">
+            <Button fx:id="btnEditar" mnemonicParsing="false">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -70,7 +70,7 @@
                   <Insets right="15.0" top="25.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" HBox.hgrow="SOMETIMES">
+            <Button fx:id="btnBorrar" mnemonicParsing="false" HBox.hgrow="SOMETIMES">
                <graphic>
                   <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>

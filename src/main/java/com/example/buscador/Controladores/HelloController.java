@@ -1,4 +1,4 @@
-package com.example.buscador;
+package com.example.buscador.Controladores;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -8,7 +8,12 @@ public class HelloController {
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    protected void onHelloButtonClick()
+    {
+
+
+
+
+
     }
 }
