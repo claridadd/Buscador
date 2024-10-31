@@ -20,7 +20,8 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(getClass().getResource("estilos.css").toExternalForm());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         launch();
     }
 }
